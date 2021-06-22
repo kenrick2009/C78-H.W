@@ -1,0 +1,25 @@
+body{
+    background: linear-gradient(#ff0000 0%, #fff700 100%);
+    text-align: center;
+}
+#ken{
+    height:198px;
+    margin-bottom: 50px;
+     border-radius:50%;
+}
+#cric{
+    height:198px;
+    
+}
+h1{
+    font-size: 48px;
+    color: deepskyblue;
+}
+h3{
+    font-size: 22px;
+        color: chartreuse;
+}
+p{
+    font-size:26.8125px;
+    color:cornsilk;
+}
