@@ -1,25 +1,48 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Project C78
-        </title>
+<head>
+<style>
+body{
+	background-image: url("concrete-road.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#myCanvas
+{
+    margin-top: 30px;
+	border-width:10px;
+	background-color: white; 
+	border-style:ridge;
+}
 
-        <link rel="stylesheet" href="style.css" type="text/css">
+h1,h3,h4
+{
+	color: rgb(255, 241, 43) !important;
+}
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
-    </head>
-    <body>
-        <center style="margin-top: 40px;">
-            <h1>
-                My Family Book
-            </h1>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-            <img src="https://i.postimg.cc/MKdhy06Z/family.jpg" id="family_member_image" width="150px" height="200px">
-            <h4 id="family_member_name"></h4>
-            <button onclick="update()">Next</button>
-          
-          
-        </center>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<title>Valet Parking </title>
+</head>
+<body onload="add();">
 
-        <script src="main.js"></script>
-    </body>
+
+<center>
+<h1>Valet Parking</h1>
+<h3 id="msg">Move the green car with arrow keys</h3>
+<canvas id="myCanvas" width=800 height=600></canvas>
+<h4>
+	<b class="text-danger">NOTE : </b> IF CAR IS NOT VISIBLE PRESS ANY ARROW KEY
+</h4>
+
+	
+
+
+</center>
+<script src="main.js">
+</script>
+</body>
 </html>

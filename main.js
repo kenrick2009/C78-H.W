@@ -1,20 +1,106 @@
-var images = ["https://i.postimg.cc/MGn9GJXw/family.jpg","https://i.postimg.cc/qqyYvVbq/grandpa.jpg", "https://i.postimg.cc/wjMnFtMX/father.jpg" , "https://i.postimg.cc/5ymDKL83/bro.jpg", "https://i.postimg.cc/JnL6wtrd/sister.jpg", "https://i.postimg.cc/bw5W5zSK/mother.jpg"];
-var names = ["Family Book","Ranbir Singh", "Diljeet Singh", "Rocky Singh", "Alia Singh", "Soni Singh"];
-var i = 0;
-function update()
-{
-    i++;
-    var numbers_of_family_member_in_array = 5
-    if(i > numbers_of_family_member_in_array)
-      {
-          i = 0;
-      }
+canvas=document.getElementById("myCanvas");
+ctx=canvas.getContext("2d");
+
+
+car_img="car2.png";
+
+car_width=75;
+car_height=170;
+
+car_x=30;
+car_y=300;
+
+background_img="parkingLot.jpg";
+
+
+
+
+
+
+function add(){
+    background_imgTag= new Image();
+    background_imgTag.onload=upload_background;
+    background_imgTag.src=background_img;
+
+    car_imgTag= new Image();
+    car_imgTag.onload=upload_car;
+    car_imgTag.src=car_img;
+}
+function upload_background(){
+    ctx.drawImage(background_imgTag,0,0,canvas.width,canvas.height);
+}
+function upload_car(){
+    ctx.drawImage(car_imgTag,car_x,car_y,car_width,car_height);
+}
+
+
+window.addEventListener("keydown",my_keydown);
+
+function my_keydown(e){
+
+    keyPressed=e.keyCode;
+    console.log(keyPressed);
+
+    if(keyPressed=='38')
+    {
+        up();
+        console.log("up");
+    }
+    if(keyPressed=='40')
+    {
+        down();
+        console.log("down");
+    }
+    if(keyPressed=='37')
+    {
+        left();
+        console.log("left");
+    }
+    if(keyPressed=='39')
+    {
+        right();
+        console.log("right");
+    }
     
-    //Debug the code to store list of images in updatedImage. Use images[i]
-    var updatedImage = images[i];
-    //Debug the code to store list of names in updatedName. Use names[i]
-    var updatedName =names[i]  ;
- 
-    document.getElementById("family_member_image").src = updatedImage;
-    document.getElementById("family_member_name").innerHTML = updatedName;
+}
+
+function up()
+{
+    if(car_y >=0){
+       car_y=car_y-10;
+        console.log("When up arrow is pressed, x = " + car_x + " | y = " +car_y);
+        upload_background();
+        upload_car();
+    }
+}
+
+function down()
+{
+    if(car_y<=500){
+        car_y=car_y+10;
+        console.log("When down arrow is pressed, x = " + car_x + " | y = " +car_y);
+        upload_background();
+        upload_car();
+    }
+}
+
+function left()
+{
+    if(car_x >=0){
+        car_x=car_x-10;
+        console.log("When left arrow is pressed, x = " + car_x + " | y = " +car_y);
+        upload_background();
+        upload_car();
+    }
+}
+
+function right()
+{
+    if(car_x<=700){
+        car_x=car_x+10;
+        console.log("When right arrow is pressed, x = " + car_x + " | y = " +car_y);
+        upload_background();
+        upload_car();
+    
+    }
 }
