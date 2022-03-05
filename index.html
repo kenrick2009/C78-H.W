@@ -1,48 +1,62 @@
-<!DOCTYPE html>
 <html>
-<head>
-<style>
-body{
-	background-image: url("concrete-road.jpg");
-    background-position: center;
-    background-size: cover;
-}
-#myCanvas
-{
-    margin-top: 30px;
-	border-width:10px;
-	background-color: white; 
-	border-style:ridge;
-}
+    <head>
+        <title>Console Web App</title>
+    </head>
+    <body >
+        <h1>Console Web App</h1>
+        <h4>Visual Studio Code is a source-code editor made by Microsoft for Windows, 
+            Linux and macOS.It has been developed by Microsoft. Console screen is used 
+            to display any text or values in the console. It is very useful for programmers as 
+            Console screen displays errors in the console.
+            <br>
+            <br>
+            <br>
+            <u>Steps</u>
+            <br>
+            1.Right Click anywhere in your Website
+            <br>
+            2.Click on Inspect
+            <br>
+            3.On the top of the inspect menu, Click on console.
 
-h1,h3,h4
-{
-	color: rgb(255, 241, 43) !important;
-}
-</style>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+           </h4>
+        <h4></h4>
+        <h4></h4>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            var intro="My first console project";
+            console.log(intro);
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<title>Valet Parking </title>
-</head>
-<body onload="add();">
+            var first_name="James";
+            console.log(first_name);
+            
+            var second_name="Bond";
+            console.log(second_name);
+            
+            var new_name=first_name.concat(second_name);
+            console.log(new_name);
 
+            var lengthofname= new_name.length;
+            console.log(lengthofname);
 
-<center>
-<h1>Valet Parking</h1>
-<h3 id="msg">Move the green car with arrow keys</h3>
-<canvas id="myCanvas" width=800 height=600></canvas>
-<h4>
-	<b class="text-danger">NOTE : </b> IF CAR IS NOT VISIBLE PRESS ANY ARROW KEY
-</h4>
+            var replacement_of_name= new_name.replace("Bond","Naismith");
+            console.log(replacement_of_name);
 
-	
+            var a=5;
+            console.log(a);
 
+            var b=10
+            console.log(b);
 
-</center>
-<script src="main.js">
-</script>
+            var c= a+b;
+            console.log(c);
+
+            var max_num= Math.max(40,10,29,21);
+            console.log(max_num);
+
+            var min_num= Math.min(40,10,29,21);
+            console.log(min_num);
+        </script>
+    
 </body>
 </html>
